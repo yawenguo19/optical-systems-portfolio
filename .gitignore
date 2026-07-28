@@ -216,3 +216,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ============================================================================
+# Optical Systems Portfolio
+# ============================================================================
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Simulation outputs (regenerate instead of versioning)
+*.npy
+*.npz
+
+# Temporary files
+*.tmp
+*.bak
