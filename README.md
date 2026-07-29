@@ -1,6 +1,8 @@
 # Optical Systems Portfolio
 
-A Python-based engineering portfolio covering optical link budgeting, OSNR analysis, coherent optical communication, OIF 800ZR-aligned system simulation, and PAM4 signaling.
+A Python-based engineering portfolio focused on optical system
+validation, IM-DD PAM4 interconnects, laser and receiver analysis,
+and OIF 800ZR-aligned coherent optical links.
 
 ## Overview
 
@@ -13,29 +15,32 @@ The projects progress from basic optical link analysis to modern coherent optica
 
 | Project | Description | Status |
 |---|---|---|
-| [01 Link Budget](01_link_budget/) | Optical power evolution, component loss, receiver sensitivity, and system margin | In progress |
-| [02 OSNR Analysis](02_osnr_analysis/) | EDFA ASE noise, noise figure, reference bandwidth, and OSNR accumulation | Planned |
-| [03 BER vs OSNR](03_ber_vs_osnr/) | Analytical and Monte Carlo BER performance for coherent modulation formats | Planned |
-| [04 Coherent Transceiver](04_coherent_transceiver/) | End-to-end coherent transmitter, optical channel, receiver, and DSP | Planned |
-| [05 800ZR Link Simulator](05_800zr_link_simulator/) | OIF 800ZR-aligned amplified coherent-link performance analysis | Planned |
-| [06 PAM4 Eye Diagram](06_pam4_eye_diagram/) | PAM4 IM-DD waveform, bandwidth limitation, eye quality, and BER | Planned |
+| [01 Optical System Validation](01_optical_system_validation/) | Measurement-oriented validation of optical components, subsystems, and links | 🚧 In Progress |
+| [02 IM-DD PAM4 Interconnect](02_imdd_pam4_interconnect/) | Short-reach PAM4 transmitter, channel, receiver, eye, BER, and equalization analysis | ⏳ Planned |
+| [03 Laser and Receiver Analysis](03_laser_and_receiver_analysis/) | Laser characterization, photodetector response, TIA noise, and receiver performance | ⏳ Planned |
+| [04 Coherent 800ZR Link](04_coherent_800zr_link/) | OIF 800ZR-aligned coherent link, OSNR, DSP, and BER simulation | ⏳ Planned |
+
 
 ## Repository Structure
 
 ```text
 optical-systems-portfolio/
-├── 01_link_budget/
-├── 02_osnr_analysis/
-├── 03_ber_vs_osnr/
-├── 04_coherent_transceiver/
-├── 05_800zr_link_simulator/
-├── 06_pam4_eye_diagram/
+├── 01_optical_system_validation/
+├── 02_imdd_pam4_interconnect/
+├── 03_laser_and_receiver_analysis/
+├── 04_coherent_800zr_link/
+├── common/
 ├── docs/
 ├── figures/
 ├── tests/
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── LICENSE
 
-🚧 Repository initialization completed.
 
-The first project (Optical Link Budget) is currently under development.
+## Current Status
+
+The repository structure has been initialized.
+
+The first project, Optical System Validation, is currently under
+development.
