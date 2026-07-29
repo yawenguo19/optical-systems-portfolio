@@ -6,10 +6,9 @@ and OIF 800ZR-aligned coherent optical links.
 
 ## Overview
 
-This repository contains a collection of optical communication projects developed for learning, research, and engineering practice.
+This repository contains a collection of engineering-oriented optical communication projects implemented in Python.
 
-The projects progress from basic optical link analysis to modern coherent optical transceiver systems.
-
+The portfolio focuses on practical system modeling, simulation, analysis, and validation of modern optical communication systems, ranging from component characterization to end-to-end coherent optical links.
 
 ## Projects
 
@@ -20,6 +19,15 @@ The projects progress from basic optical link analysis to modern coherent optica
 | [03 Laser and Receiver Analysis](03_laser_and_receiver_analysis/) | Laser characterization, photodetector response, TIA noise, and receiver performance | ⏳ Planned |
 | [04 Coherent 800ZR Link](04_coherent_800zr_link/) | OIF 800ZR-aligned coherent link, OSNR, DSP, and BER simulation | ⏳ Planned |
 
+## Technologies
+
+- Python
+- NumPy
+- SciPy
+- Matplotlib
+- Pandas
+- Jupyter Notebook
+- Pytest
 
 ## Repository Structure
 
@@ -36,11 +44,11 @@ optical-systems-portfolio/
 ├── README.md
 ├── requirements.txt
 └── LICENSE
-
+```
 
 ## Current Status
 
-The repository structure has been initialized.
+The repository is under active development.
 
-The first project, Optical System Validation, is currently under
-development.
+The first project, **Optical System Validation**, is currently being implemented. Additional projects will be added progressively as the portfolio evolves.
+
