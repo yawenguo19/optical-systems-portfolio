@@ -19,7 +19,7 @@ Future extensions will include amplifier modeling, OSNR analysis, receiver sensi
 
 ## System Model
 <p align="center">
-  <img src="figures/system_model.png" width="700">
+  <img src="figures/system_model.svg" width="700">
 </p>
 
 The received optical power is computed by subtracting the accumulated insertion loss from the transmitted optical power.
