@@ -1,30 +1,40 @@
 # 01 — Optical System Validation
-
-## Overview
-
-This project implements a Python toolkit for validating optical communication links.
-
-The current version focuses on point-to-point link budget analysis and provides reusable modules for evaluating receiver power, system margin, and pass/fail conditions.
-
-Future extensions will include amplifier modeling, OSNR analysis, receiver sensitivity, and end-to-end optical system validation.
-
-## Features
-
-- Optical link budget calculation
-- Fiber attenuation modeling
-- Connector loss modeling
-- Receiver sensitivity evaluation
-- System margin calculation
-- Pass / Fail validation
+This project implements a Python toolkit for validating optical communication links through reusable modeling, simulation, and analysis.
 
 ## System Model
 <p align="center">
-  <img src="figures/system_model.svg" width="700">
+  <img
+    src="figures/system_model.svg"
+    alt="Point-to-point optical link model"
+    width="900"
+  >
 </p>
 
 The received optical power is computed by subtracting the accumulated insertion loss from the transmitted optical power.
 
-## Example
+## Overview
+
+Optical link validation is one of the most fundamental engineering tasks in optical communication systems.
+
+This project provides reusable Python modules for evaluating optical power budgets and validating whether a communication link satisfies receiver requirements.
+
+The toolkit is designed as the foundation for more advanced optical system simulations.
+
+## Features
+
+✔ Link Budget Calculation
+
+✔ Fiber Loss Modeling
+
+✔ Receiver Sensitivity Validation
+
+✔ System Margin Evaluation
+
+✔ Modular Python Implementation
+
+✔ Reusable Engineering Components
+
+## Example Results
 
 tx_power = 3
 fiber_length = 40
