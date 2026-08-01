@@ -1,1 +1,45 @@
-<mxlibrary>[]</mxlibrary>
+<mxlibrary>[
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" parent=\"1\" style=\"rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF3FF;strokeColor=#4A90E2;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontColor=#222222;fontStyle=1\" value=\"Laser\" vertex=\"1\"&gt;&lt;mxGeometry height=\"60\" width=\"130\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 130,
+    "h": 60,
+    "aspect": "fixed",
+    "title": "physical component"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" parent=\"1\" style=\"rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF7EE;strokeColor=#5B9A68;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontColor=#222222;fontStyle=1\" value=\"Fiber\" vertex=\"1\"&gt;&lt;mxGeometry height=\"60\" width=\"130\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 130,
+    "h": 60,
+    "aspect": "fixed"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" parent=\"1\" style=\"rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#777777;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontColor=#222222;fontStyle=1\" value=\"DSP\" vertex=\"1\"&gt;&lt;mxGeometry height=\"60\" width=\"130\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 130,
+    "h": 60,
+    "aspect": "fixed"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" edge=\"1\" parent=\"1\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#666666;strokeWidth=1.5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\"&gt;&lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;&lt;mxPoint as=\"sourcePoint\"/&gt;&lt;mxPoint x=\"100\" as=\"targetPoint\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 100,
+    "h": 1,
+    "aspect": "fixed"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" parent=\"1\" style=\"text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;\" value=\"&amp;lt;font face=&amp;quot;Arial&amp;quot; style=&amp;quot;font-size: 11px; color: rgb(85, 85, 85);&amp;quot;&amp;gt;$$P_{tx} = 3&amp;amp;nbsp; dBm$$&amp;lt;/font&amp;gt;\" vertex=\"1\"&gt;&lt;mxGeometry height=\"30\" width=\"110\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 110,
+    "h": 30,
+    "aspect": "fixed"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" edge=\"1\" parent=\"1\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#666666;strokeWidth=1.5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\"&gt;&lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;&lt;mxPoint y=\"34.41\" as=\"sourcePoint\"/&gt;&lt;mxPoint x=\"100\" y=\"35\" as=\"targetPoint\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\"3\" parent=\"1\" style=\"text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;\" value=\"&amp;lt;font face=&amp;quot;Arial&amp;quot; style=&amp;quot;font-size: 11px; color: rgb(85, 85, 85);&amp;quot;&amp;gt;Optical Signal&amp;lt;/font&amp;gt;\" vertex=\"1\"&gt;&lt;mxGeometry height=\"30\" width=\"60\" x=\"10\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 100,
+    "h": 35.39999999999998,
+    "aspect": "fixed"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" parent=\"1\" style=\"rhombus;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#F5EEFF;strokeColor=#8757B5;fontSize=14;fontFamily=Arial;fontColor=#222222;fontStyle=1\" value=\"Margin ≥ 0?\" vertex=\"1\"&gt;&lt;mxGeometry height=\"80\" width=\"80\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 80,
+    "h": 80,
+    "aspect": "fixed"
+  }
+]</mxlibrary>
