@@ -33,7 +33,7 @@ The received optical power is computed by subtracting the accumulated insertion 
 
 <p align="center">
   <img
-    src="figures/WorkFlow.svg"
+    src="figures/workflow.svg"
     alt="Workflow"
     width="900"
   >
@@ -83,27 +83,29 @@ attenuation, 1 dB connector loss, −16 dBm receiver sensitivity, and a
 3 dB required engineering margin:
 
 ```text
-Fiber loss:       8.80 dB
-Total loss:       9.80 dB
-Receiver power:  -6.80 dBm
-Available margin: 9.20 dB
-Net margin:       6.20 dB
-Status:           PASS
+fiber loss :        8.80 dB
+Total loss :        9.80 dB
+Receiver Power:     -6.80 dBm
+available margin:   9.20 dB
+net margin:         6.20 dB
+Status:             PASS
 ```
 
 ## Repository Structure
 ```text
-01_optical_system_validation/
-├── README.md
-├── models/
-│   ├── __init__.py
-│   └── link_budget.py
-├── examples/
-│   └── basic_link.py
-└── figures/
-    ├── system_model.drawio
-    ├── system_model.svg
-    └── power_waterfall.png
+optical-systems-portfolio/
+├── optical_systems/
+│   └── validation/
+│       └── link_budget.py
+├── 01_optical_system_validation/
+│   ├── README.md
+│   ├── examples/
+│   │   └── basic_link.py
+│   └── figures/
+│       ├── system_model.drawio
+│       └── system_model.svg
+└── tests/
+    └── test_link_budget.py
 ```
 
 The corresponding unit tests are stored in the repository-level
