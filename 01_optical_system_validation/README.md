@@ -65,11 +65,7 @@ $$
 and the received optical power is
 
 $$
-P_{\mathrm{RX}}
-=
-P_{\mathrm{TX}}
--
-L_{\mathrm{total}}.
+P_{\mathrm{RX}}= P_{\mathrm{TX}} - L_{\mathrm{total}}.
 $$
 
 The link passes when the available margin exceeds the required
