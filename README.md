@@ -1,54 +1,62 @@
 # Optical Systems Portfolio
+## High-Speed Optical Communication \| PAM4 \| Transceivers \| System Validation
 
-A Python-based engineering portfolio focused on optical system
-validation, IM-DD PAM4 interconnects, laser and receiver analysis,
-and OIF 800ZR-aligned coherent optical links.
+A Python-based engineering portfolio focused on optical link modeling, high-speed IM/DD transceiver simulation, signal integrity, and automated performance validation.
 
 ## Overview
 
-This repository contains a collection of engineering-oriented optical communication projects implemented in Python.
+This repository develops reusable tools and simulation workflows for optical communication systems, with an emphasis on bridging communication theory and practical transceiver engineering.
 
-The portfolio focuses on practical system modeling, simulation, analysis, and validation of modern optical communication systems, ranging from component characterization to end-to-end coherent optical links.
+The primary goal is to build and characterize a **high-speed PAM4 optical transceiver**, analyze the physical limitations of the link, and develop systematic methods for performance evaluation and validation.
+
+The portfolio combines:
+
+* Physics-based optical communication models
+* Digital signal processing and equalization
+* Eye diagram, BER, and receiver performance analysis
+* Link-budget and signal-integrity evaluation
+* Reproducible Python simulations and automated testing
 
 ## Projects
 
-| Project | Description | Status |
+| Project | Scope | Status |
 |---|---|---|
-| [01 Optical System Validation](01_optical_system_validation/) | Measurement-oriented validation of optical components, subsystems, and links | 🚧 In Progress |
-| [02 IM-DD PAM4 Interconnect](02_imdd_pam4_interconnect/) | Short-reach PAM4 transmitter, channel, receiver, eye, BER, and equalization analysis | ⏳ Planned |
-| [03 Laser and Receiver Analysis](03_laser_and_receiver_analysis/) | Laser characterization, photodetector response, TIA noise, and receiver performance | ⏳ Planned |
-| [04 Coherent 800ZR Link](04_coherent_800zr_link/) | OIF 800ZR-aligned coherent link, OSNR, DSP, and BER simulation | ⏳ Planned |
+| [01 Optical System Validation](01_optical_system_validation/) | Optical link budget, power loss, receiver sensitivity threshold, and engineering margin | Baseline implemented |
+| [02 High-Speed PAM4 Optical Transceiver](02_imdd_pam4_interconnect/) | PAM4 transmitter, optical channel, receiver, eye diagrams, and BER | In progress |
+| [03 High-Speed Signal Integrity & DSP](03_laser_and_receiver_analysis/) | Frequency response, S-parameters, bandwidth limitations, and equalization | Planned |
+| [04 Automated Transceiver Characterization](04_coherent_800zr_link/) | Receiver sensitivity, performance sweeps, pass/fail criteria, and validation reports | Planned |
 
 ## Technologies
 
-- Python
-- NumPy
-- SciPy
-- Matplotlib
-- Pandas
-- Jupyter Notebook
-- Pytest
+- **Core**: Python, NumPy, pytest
+- **Optical communication simulation**: OptiCommPy
+- **Planned analysis and visualization**: SciPy, Matplotlib, scikit-rf
+
+OptiCommPy provides established optical communication and DSP models, while this repository focuses on system integration, model validation, performance characterization, and engineering analysis.
+
+## Testing
+Run from the repository root with the required dependencies installed:
+
+` python -m pytest -q `
+
+Individual components are developed and tested incrementally to maintain reproducibility.
 
 ## Repository Structure
 
-```text
-optical-systems-portfolio/
-├── 01_optical_system_validation/
-├── 02_imdd_pam4_interconnect/
-├── 03_laser_and_receiver_analysis/
-├── 04_coherent_800zr_link/
-├── common/
-├── docs/
-├── figures/
-├── tests/
-├── README.md
-├── requirements.txt
-└── LICENSE
-```
+
 
 ## Current Status
 
 The repository is under active development.
 
-The first project, **Optical System Validation**, is currently being implemented. Additional projects will be added progressively as the portfolio evolves.
+Completed and tested:
+
+* Configurable point-to-point optical link-budget model
+* Fiber attenuation and insertion-loss calculations
+* Received-power and engineering-margin evaluation
+* Link-budget pass/fail logic
+* PAM4 Gray-coded symbol-mapping verification
+* Automated unit tests using pytest
+
+Current test status: 4 passing tests 
 

@@ -1,19 +1,15 @@
 # 01 — Optical System Validation
-This project implements a Python toolkit for validating optical communication links through reusable modeling, simulation, and analysis.
+## Optical Link Budget \| Receiver Power \| Engineering Margin
+
+A Python-based optical link-budget model for evaluating received optical power, link losses, and system margin.
 
 ## Overview
 
-Optical link validation determines whether the optical power delivered
-to a receiver satisfies its sensitivity and system-margin requirements.
+Optical link budgeting is a fundamental step in communication system design and validation.
 
-The first milestone implements a configurable point-to-point optical
-link-budget model. It evaluates accumulated link loss, received optical
-power, available margin, required engineering margin, and pass/fail
-status.
+This project implements a configurable point-to-point optical link-budget calculator that estimates received power and evaluates whether a link meets specified receiver sensitivity and engineering-margin requirements.
 
-Future milestones will extend the framework to amplified links, optical
-signal-to-noise ratio analysis, receiver noise, and automated validation
-reports.
+The implementation emphasizes reusable Python components, transparent calculations, and automated testing.
 
 ## System Model
 <p align="center">
@@ -24,59 +20,70 @@ reports.
   >
 </p>
 
-The initial system consists of a transmitter, passive connection losses,
-an optical fiber channel, and a receiver.
+The baseline model includes:
 
-The received optical power is computed by subtracting the accumulated insertion loss from the transmitted optical power. 
-
-## Workflow
-
-<p align="center">
-  <img
-    src="figures/workflow.svg"
-    alt="Workflow"
-    width="900"
-  >
-</p>
-
-
-## Features
-
-✔ Link Budget Calculation
-
-✔ Fiber Loss Modeling
-
-✔ Receiver Sensitivity Validation
-
-✔ System Margin Evaluation
-
-✔ Modular Python Implementation
-
-✔ Reusable Engineering Components
+* Optical transmitter power
+* Fiber attenuation and propagation distance
+* Additional insertion losses
+* Receiver sensitivity threshold
+* Required engineering margin
 
 ## Mathematical Model
 
-The accumulated fiber loss is
+Fiber attenuation is calculated as:
 
 $$
 L_{\mathrm{fiber}} = \alpha L
 $$
 
-and the received optical power is
+where $\alpha$ is the attenuation coefficient in dB/km and $L$ is the fiber length in km.
+
+The total link loss is:
 
 $$
-P_{\mathrm{RX}}= P_{\mathrm{TX}} - L_{\mathrm{total}}.
+L_{\mathrm{total}} = L_{\mathrm{fiber}} + L_{\mathrm{other}}
 $$
 
-The link passes when the available margin exceeds the required
-engineering margin.
+Received optical power is:
 
+$$
+P_{\mathrm{RX}} = P_{\mathrm{TX}} - L_{\mathrm{total}}
+$$
+
+where optical powers are expressed in dBm and losses in dB.
+
+Available link margin:
+
+$$
+M_{\mathrm{available}} = P_{\mathrm{RX}} - P_{\mathrm{sensitivity}}
+$$
+
+Net engineering margin:
+
+$$
+M_{\mathrm{net}} = M_{\mathrm{available}} - M_{\mathrm{required}}
+$$
+
+The link passes the power-budget check when:
+
+$$
+M_{\mathrm{net}} \geq 0
+$$
+
+
+## Example Validation
+The example uses the following configuration:
+
+|Parameter | Value|
+| :---|:--- |
+|Fiber length |40km|
+|Fiber attenuation| 0.22dB/km|
+|Transimission power| 3dBm|
+|Additional insertion loss| 1dB|
+|Receiver sensitivity| -16dBm|
+|Required engineering margin| 3dB|
 
 ## Example Results
-
-For a 40 km link with 3 dBm transmitter power, 0.22 dB/km fiber
-attenuation, 1 dB connector loss, −16 dBm receiver sensitivity, and a
-3 dB required engineering margin:
 
 ```text
 fiber loss :        8.80 dB
@@ -87,7 +94,12 @@ net margin:         6.20 dB
 Status:             PASS
 ```
 
-## Repository Structure
+The model predicts 6.2 dB of net margin beyond the specified engineering-margin requirement.
+
+This is a power-budget result, not a measured BER or a complete link-performance qualification.
+
+## Implementation
+The model and example are organized as follows:
 ```text
 optical-systems-portfolio/
 ├── optical_systems/
@@ -98,22 +110,27 @@ optical-systems-portfolio/
 │   ├── examples/
 │   │   └── basic_link.py
 │   └── figures/
-│       ├── system_model.drawio
 │       └── system_model.svg
 └── tests/
     └── test_link_budget.py
 ```
 
-The corresponding unit tests are stored in the repository-level
-`tests/` directory.
+
+## Testing
+Run the link-budget unit tests from the repository root:
+
+` python -m pytest tests/test_link_budget.py -q`
+
+The project uses pytest to verify model behavior and expected calculations.
+
 
 ## Planned Extensions
 
-- Component-by-component power waterfall
-- Received power versus fiber distance
-- Maximum supported distance
-- Parameter validation and informative error handling
-- EDFA gain and ASE noise
-- OSNR estimation
-- Automated validation reports
+* Optical power budget versus fiber distance
+* Maximum supported distance estimation
+* Component-level loss visualization
+* Automated parameter sweeps
+* Structured validation reports
+
+Future integration with the PAM4 transceiver simulator will allow link-budget results to be compared with simulated receiver and BER performance.
 
